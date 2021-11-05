@@ -1,4 +1,5 @@
-import 'package:flutter_food_delivery_ui/models/order.dart';
+
+import 'package:foodie/models/order.dart';
 
 class User {
   final String? name;
