@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:foodie/models/order.dart';
 import 'package:foodie/data/data.dart';
+import 'package:foodie/widgets/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
+  // _buildRecentOrder(BuildContext context) {
+  //   return
+  // }
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -18,18 +23,32 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () {},
         ),
         actions: [
-          TextButton(
-            child: Text(
-              'Cart  ${currentUser.cart == null ? 0 : currentUser.cart!.length} items',
-              style: TextStyle(fontSize: 15.0, color: Colors.white),
-            ),
-            onPressed: () {},
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                icon: Icon(Icons.add_shopping_cart),
+                iconSize: 25,
+                onPressed: () {
+                  print('Home screen cart button got pressed');
+                },
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 10),
+                child: Center(
+                  child: Text(
+                      '${currentUser.cart == null ? 0 : currentUser.cart!.length} items'),
+                ),
+              ),
+            ],
           )
         ],
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             TextField(
               decoration: InputDecoration(
@@ -44,10 +63,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(30.0),
                       borderSide: BorderSide(
                           width: 1, color: Theme.of(context).primaryColor))),
-            )
+            ),
+            RecentOrder(
+              orders: currentUser,
+            ),
           ],
         ),
       ),
     );
   }
 }
+// itemCount: currentUser.orders!.length,
+//price- order.food!.price
+//restaurant name- order.restaurant!.name!
+//food name- order.food!.name!
+//image- AssetImage(order.food!.imageUrl!)
+//order-  currentUser.orders![index]
+//length- currentUser.orders!.length,
