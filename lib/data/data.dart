@@ -24,7 +24,7 @@ final _salmon = Food(
 // Restaurants
 final _restaurant0 = Restaurant(
     imageUrl: 'assets/images/restaurant0.jpg',
-    name: 'Hambuchana Birinai',
+    name: 'Hambuchana Biriani',
     address: '200 Main St, New York, NY',
     rating: 5,
     menu: [
@@ -40,7 +40,7 @@ final _restaurant0 = Restaurant(
     distance: 5);
 final _restaurant1 = Restaurant(
   imageUrl: 'assets/images/restaurant1.jpg',
-  name: 'Hambuchana Birinai',
+  name: 'Hambuchana Sweets',
   address: '200 Main St, New York, NY',
   rating: 4,
   menu: [_steak, _pasta, _ramen, _pancakes, _burger, _pizza],
