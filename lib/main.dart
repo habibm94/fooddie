@@ -11,8 +11,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'FOODIE',
       theme: ThemeData(
-          scaffoldBackgroundColor: Colors.grey[50],
-          primaryColor: Colors.deepOrange),
+        scaffoldBackgroundColor: Colors.grey[50],
+        primaryColor: Colors.deepOrange,
+        //cardColor: Colors.grey[400]!
+      ),
       home: HomeScreen(),
     );
   }

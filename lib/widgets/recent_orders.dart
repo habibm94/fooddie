@@ -6,20 +6,9 @@ import 'package:foodie/models/user.dart';
 
 class RecentOrder extends StatelessWidget {
   final User orders;
-  // final String dateTime;
-  // final double price;
-  // final String foodName;
-  // final String restaurantName;
-  // final String? imageUrl;
-  // dynamic orderLength;
+
   RecentOrder({required this.orders});
-  // {this.orderLength,
-  // required this.foodName,
-  // required this.price,
-  // required this.orders,
-  // required this.dateTime,
-  // required this.restaurantName,
-  // this.imageUrl});
+
   @override
   Widget build(BuildContext context) {
     var userRecentOrder = orders;
@@ -27,7 +16,7 @@ class RecentOrder extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 15.0),
+          padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
           child: Text(
             'Recent Order',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -37,7 +26,6 @@ class RecentOrder extends StatelessWidget {
           height: 120.0,
           child: ListView.builder(
             itemBuilder: (BuildContext context, int index) {
-              //var order = orders[index];
               return Container(
                 margin: EdgeInsets.all(10.0),
                 width: 280.0,
