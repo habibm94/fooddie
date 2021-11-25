@@ -57,7 +57,7 @@ final _restaurant3 = Restaurant(
     imageUrl: 'assets/images/restaurant3.jpg',
     name: 'Armani FastFood',
     address: '200 Main St, New York, NY',
-    rating: 2,
+    rating: 4,
     menu: [_burrito, _steak, _burger, _pizza, _salmon],
     distance: 2.3);
 final _restaurant4 = Restaurant(
